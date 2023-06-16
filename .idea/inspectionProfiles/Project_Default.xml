@@ -1,0 +1,15 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false" editorAttributes="WARNING_ATTRIBUTES">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="pygame" />
+          <option value="main.fastapi" />
+          <option value="main.pydantic" />
+          <option value="pydantic.BaseModel" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

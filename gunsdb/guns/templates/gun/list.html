@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Seznam zbraní{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-sm-12 bg-warning">
+            <h2 class="display-4 text-center">Seznam zbraní</h2>
+        </div>
+    </div>
+    <div class="row">
+        {% for gun in guns_list %}
+        <div class="col-sm-6 col-md-4 col-lg-4 mb-1">
+            <div class="card">
+                <h4 class="card-title text-center"><a href="{% url 'gun_detail' gun.pk %}">{{ gun.name }}</a></h4>
+                <p class="pl-2 pr-2">{{ gun.description|truncatewords:30 }}</p>
+                <a href="{% url 'gun_detail' gun.pk %}" class="btn btn-warning">Podrobnosti</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
