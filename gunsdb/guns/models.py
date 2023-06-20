@@ -68,6 +68,8 @@ class Gun(models.Model):
     type = models.ManyToManyField(Type, help_text='Vyberte typ zbraně')
     maker = models.ManyToManyField(Maker, blank=True, help_text='Vyberte výrobce zbraně')
     inventor = models.ManyToManyField(Inventor, blank=True, help_text='Vyberte vynálezces zbraně')
+    poster = models.ImageField(upload_to='guns/posters/', blank=True, null=True,
+                               verbose_name="Poster")
 
     rate = models.FloatField(default=5.0,
                              validators=[MinValueValidator(1.0), MaxValueValidator(10.0)],

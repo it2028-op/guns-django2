@@ -24,7 +24,10 @@
                 <div class="col-sm-6 col-lg-6 mb-1 mt-1">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">{{ gun.name }}</h4>
+                            <h4 class="card-title text-center">{{ gun.name }}</h4>
+                            {% if gun.poster %}
+                            <img class="card-img-top border border-dark" src="{{ gun.poster.url }}" alt="{{ gun.name }}">
+                            {% endif %}
                             <p>{{ gun.description|truncatewords:30 }}</p>
                             <p><strong>Hodnocení:</strong> {{ gun.rate }}</p>
                             <a href="{% url 'gun_detail' gun.pk %}" class="btn btn-primary">Podrobnosti</a>
